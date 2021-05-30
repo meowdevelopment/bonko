@@ -1,5 +1,5 @@
 let version = 1;
-if (version !== config.version) console.error('>- INCORRECT CONFIG VERSION. YOU MAY NEED TO UPDATE BONKO -<');
+if (version !== _config.version) console.error('>- INCORRECT CONFIG VERSION. YOU MAY NEED TO UPDATE BONKO -<');
 
 let main = async function () {
 	window._data = {
