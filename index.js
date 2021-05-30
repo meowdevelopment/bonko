@@ -1,3 +1,6 @@
+let version = 1;
+if (version !== config.version) console.error('>- INCORRECT CONFIG VERSION. YOU MAY NEED TO UPDATE BONKO -<');
+
 let main = async function () {
 	window._data = {
 		instruments: Object.keys(InstrumentEnum).reduce((obj, ins) => {
@@ -25,6 +28,9 @@ let main = async function () {
 		})();
 }
 	.toString()
-	.replace(/\/\* \#import (.*) \*\//gim, `window.eval(await (await fetch("${_config.remote}$1.js")).text())`);
+	.replace(
+		/\/\* \#import (.*) \*\//gim,
+		`window.eval(await (await fetch("${_config.remote}/${_config.pluginsDir}/$1.js")).text())`
+	);
 
 window.eval(`!(${main})()`);
