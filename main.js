@@ -6,10 +6,10 @@ window._config = {
 	waitForNotes: false, // waits for a note to finish the playing state before starting the next delay
 	pushVars: ['_config', '_data', '_util', 'InstrumentEnum', 'InstrumentPerKeyEnum', 'BongoSet', 'BongoSoundboard'], // variables to push to BongoComposer, you shouldnt need to change this
 	forceDark: true, // forces dark theme (only use if you are on light theme)
-	remote: `${window.location.protocol}//cdn.jsdelivr.net/gh/itzTheMeow/bonko`, // the remote to fetch scripts from
+	remote: `${window.location.protocol}//raw.githack.com/itzTheMeow/bonko/master`, // the remote to fetch scripts from
 	pluginsDir: 'plugins', // the directory to get plugins from
 };
 !(async function () {
 	// fetches and runs the script
-	window.eval(await (await fetch(`${_config.remote}@latest/index.js`)).text());
+	window.eval(await (await fetch(`${_config.remote}/index.js`)).text());
 })();
