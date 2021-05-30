@@ -5,7 +5,7 @@ window._config = {
 	waitForNotes: false, // waits for a note to finish the playing state before starting the next delay
 	pushVars: ['_config', '_data', '_util', 'InstrumentEnum', 'InstrumentPerKeyEnum', 'BongoSet', 'BongoSoundboard'], // variables to push to BongoComposer, you shouldnt need to change this
 	forceDark: true, // forces dark theme
-	remote: 'https://github.com/itzTheMeow/bonko/raw/master/index_old.js', // the remote script to run
+	remote: 'http://cdn.jsdelivr.net/gh/itzTheMeow/bonko/index_old.js', // the remote script to run
 };
 !async function () {
 	// fetches and runs the script
